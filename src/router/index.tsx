@@ -9,6 +9,8 @@ import CheckoutPage from "../pages/CheckoutPage";
 import DashboardPage from "../pages/DashboardPage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
+import DashboardLayout from "../components/Layouts/DashboardLayout";
+import OrderManagement from "../pages/OrderManagement";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -42,15 +44,23 @@ const router = createBrowserRouter([
                 path: "contact-us",
                 element: <ContactPage />,
             },
-        ],  
+        ],
     },
     {
         path: "dashboard",
-        element: <DashboardPage />,
+        element: <DashboardLayout />,
         children: [
             {
                 index: true,
-                element: <>this is dashboard item</>
+                element: <DashboardPage />
+            },
+            {
+                path: "product-management",
+                element: <DashboardPage />
+            },
+            {
+                path: "order-management",
+                element: <OrderManagement/>
             }
         ]
     },
