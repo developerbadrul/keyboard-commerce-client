@@ -1,10 +1,12 @@
+import Banner from "../../components/UI/Banner";
 
-const Home = () => {
+
+
+
+export default function Home() {
+
     return (
-        <div>
-            home page
-        </div>
-    );
-};
+        <Banner />
+    )
+}
 
-export default Home;

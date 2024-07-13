@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
                         <a href="#" aria-label="Home">
                             <Logo className="h-10 w-auto" />
                         </a>
-                        <div className="hidden md:flex md:gap-x-6">
+                        <div className="hidden md:flex md:gap-x-6 font-semibold">
                             <NavLink href="/">Home</NavLink>
                             <NavLink href="/products">Products</NavLink>
                             <NavLink href="/about-us">About Us</NavLink>
